@@ -19,6 +19,7 @@ class BooksController < ApplicationController
     @user = @book.user
     @favorite = Favorite.find_by(book_id: params[:book_id], user_id: current_user.id)
     @favorites = Favorite.all
+
   end
 
   def create

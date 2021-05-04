@@ -13,3 +13,11 @@
 <div class='row'>
   <%= link_to '',edit_user_path(user),class: "btn btn-outline-secondary btn-block fas fa-user-cog edit_user_#{user.id}" %>
 </div>
+<%= link_to  following_user_path(user) do %>
+<p>フォロー数<%= user.followings.count %></p>
+<% end %>
+<%= link_to  followers_user_path(user) do %>
+<p>フォロワー数<%= user.followers.count %></p>
+
+<% end %>
+<%= render 'relationships/follow_button', user: user %>
