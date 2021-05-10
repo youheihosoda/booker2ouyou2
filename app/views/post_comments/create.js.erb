@@ -1,0 +1,2 @@
+$('textarea[name="post_comment[comment]"]').val('')
+$('#comments_index_<%= @book.id %>').html("<%= j(render partial: 'post_comments/index', locals: { post_comment: @post_comment, book: @book}) %>");
